@@ -1,1 +1,47 @@
-# aiverse-beta
+# AiVerse 测试版（Beta）
+
+本仓库存放 **AiVerse 的每日测试版构建**。测试包由主仓库 [yhdmgf/AiVerse](https://github.com/yhdmgf/AiVerse) 的 CI 在固定时间自动构建并发布到本仓库的 [Releases](https://github.com/yhdmgf/aiverse-beta/releases)，版本号自动递增。
+
+> ⚠️ **不建议普通用户使用。** 测试版面向开发者与测试者尝鲜，可能不稳定甚至存在高危问题。普通用户请使用 [正式版](https://aivapp.cn/download) 或主仓库 Releases 里的预览版（rc）。
+
+## 这是什么
+
+- 每天北京时间 **0:00 / 6:00 / 12:00 / 18:00** 自动构建主仓库 `main` 分支的最新代码。
+- 每个 beta 包：正式签名 + R8 混淆，包名 `com.aiverse.beta`，**可与正式版同机共存、互不覆盖**。
+- 版本号从 `1.0.1` 起自动递增，到 `1.0.99` 后进位到 `2.0.0`。
+
+## ⚠️ 使用须知（请先阅读）
+
+- **仅供内部测试体验，不代表最终版本。**
+- **请勿二次分发、转包、上传或分享给他人，禁止用于商业用途。**
+- 测试版**带水印**，且**不参与应用内检查更新**——不会提示升级，也不会把你导向正式包，需要手动回本仓库下载新版。
+- 可能不稳定：崩溃、功能异常、数据不兼容都可能出现，**重要数据请自行备份**。
+
+## 安装包选择
+
+每个 Release 附带一个 `AiVerse-beta-<版本>.zip`，内含三个 APK 与使用守则，按设备类型选择：
+
+| 文件 | 适用设备 | 说明 |
+|------|----------|------|
+| `AiVerse-universal-beta.apk` | 任意设备 | 通用版，含 arm + x86 两套镜像，体积最大。不确定架构时优先选这个 |
+| `AiVerse-arm64-beta.apk` | 绝大多数真机 | arm64 真机版，体积最小 |
+| `AiVerse-x86_64-beta.apk` | 模拟器 | x86_64 模拟器版 |
+
+安装前请确认设备架构；如不确定，建议安装 universal 通用版。
+
+## 想要最新构建但还没有？
+
+某个 commit 刚推上去、对应的 beta 包还没构建时，有两种办法拿到最新包：
+
+1. **手动触发**：到主仓库 [Actions → Nightly Build](https://github.com/yhdmgf/AiVerse/actions/workflows/nightly-build.yml)，点 `Run workflow` 立即构建一次。
+2. **等下一个定时点**：北京时间 0 / 6 / 12 / 18 点会自动构建。
+
+## 正式版与反馈
+
+- **正式版下载**：[https://aivapp.cn/download](https://aivapp.cn/download)
+- **官方主仓库**：[yhdmgf/AiVerse](https://github.com/yhdmgf/AiVerse)
+- **问题反馈**：测试中遇到的问题欢迎到[主仓库 Issues](https://github.com/yhdmgf/AiVerse/issues) 提交，附上版本号、复现步骤、设备型号与系统版本。
+
+## 免责声明
+
+测试版按「现状」提供，仅供学习、研究与合法的软件开发用途。使用测试版产生的任何风险与损失由使用者自行承担。若不同意上述声明，请立即停止使用并卸载本软件。
