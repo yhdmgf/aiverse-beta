@@ -1,5 +1,7 @@
 # AiVerse 测试版（Beta）
 
+> 中文 · [English](README.en.md)
+
 本仓库存放 **AiVerse 的每日测试版构建**。测试包由主仓库 [yhdmgf/AiVerse](https://github.com/yhdmgf/AiVerse) 的 CI 在固定时间自动构建并发布到本仓库的 [Releases](https://github.com/yhdmgf/aiverse-beta/releases)，版本号自动递增。
 
 > ⚠️ **不建议普通用户使用。** 测试版面向开发者与测试者尝鲜，可能不稳定甚至存在高危问题。普通用户请使用 [正式版](https://aivapp.cn/download) 或主仓库 Releases 里的预览版（rc）。
@@ -19,7 +21,7 @@
 
 ## 安装包选择
 
-每个 Release 附带一个 `AiVerse-beta-<版本>.zip`，内含三个 APK 与使用守则，按设备类型选择：
+每个 Release 直接附带三个 APK（文件名固定，不带版本号）与使用守则，按设备类型选择：
 
 | 文件 | 适用设备 | 说明 |
 |------|----------|------|
@@ -33,7 +35,7 @@
 
 某个 commit 刚推上去、对应的 beta 包还没构建时，有两种办法拿到最新包：
 
-1. **手动触发**：到主仓库 [Actions → Nightly Build](https://github.com/yhdmgf/AiVerse/actions/workflows/nightly-build.yml)，点 `Run workflow` 立即构建一次。
+1. **网页一键触发**：打开 [测试版触发页](https://aivapp.cn/trigger/)，点「触发构建」即可代你在 GitHub 上排队一次构建（全局限频：所有人共享，1 小时内只能成功触发一次）。
 2. **等下一个定时点**：北京时间 0 / 6 / 12 / 18 点会自动构建。
 
 ## 正式版与反馈
